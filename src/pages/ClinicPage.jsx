@@ -510,55 +510,91 @@ function Hero({ c, go }) {
             {/* 1. TOP STATS STRIP - Upgraded with Ticker-feel */}
             <div style={{
                 borderBottom: "1px solid #F0F0F0",
-                padding: "12px 5%",
+                padding: "12px 16px", // Fixed padding for consistency
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
                 background: "#fff",
                 zIndex: 20,
-                position: "relative"
+                position: "relative",
+                width: "100%",
+                boxSizing: "border-box",
+                gap: "12px"
             }}>
+                {/* Stats Container - The Scroll magic happens here */}
                 <div style={{
                     display: "flex",
-                    gap: "clamp(24px, 5vw, 60px)",
+                    alignItems: "center",
+                    gap: "clamp(16px, 4vw, 40px)",
                     overflowX: "auto",
                     msOverflowStyle: "none",
-                    scrollbarWidth: "none"
+                    scrollbarWidth: "none",
+                    flex: "1",
+                    paddingRight: "10px"
                 }} className="ov-no-scrollbar">
                     {c.stats?.map((s, i) => (
                         <div key={s.label} style={{
                             display: "flex",
-                            alignItems: "center",
-                            gap: 12,
+                            flexDirection: "column",
+                            flexShrink: 0, // Prevents the individual stat from squishing
                             opacity: in1 ? 1 : 0,
                             transform: in1 ? "none" : "translateY(10px)",
                             transition: `all 0.8s ease ${i * 0.1}s`,
-                            whiteSpace: "nowrap"
                         }}>
-                            <div style={{ display: "flex", flexDirection: "column" }}>
-                                <span style={{ fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 2.2vw, 26px)", color: "#1A1A1A", lineHeight: 1 }}>{s.value}</span>
-                                <span style={{ fontSize: 8, fontWeight: 900, textTransform: "uppercase", letterSpacing: "1.5px", color: hl }}>{s.label}</span>
-                            </div>
-                            {i !== (c.stats.length - 1) && <div style={{ width: 1, height: 20, background: "#EEE" }} className="ov-hide-mobile" />}
+                            <span style={{
+                                fontFamily: "'Instrument Serif', serif",
+                                fontSize: "clamp(20px, 2.5vw, 26px)",
+                                color: "#1A1A1A",
+                                lineHeight: 1.1
+                            }}>
+                                {s.value}
+                            </span>
+                            <span style={{
+                                fontSize: "clamp(7px, 1.2vw, 8px)", // Smaller on mobile
+                                fontWeight: 900,
+                                textTransform: "uppercase",
+                                letterSpacing: "0.5px", // Tightened for mobile
+                                color: hl,
+                                whiteSpace: "nowrap" // STOP THE OVERLAP
+                            }}>
+                                {s.label}
+                            </span>
                         </div>
                     ))}
                 </div>
 
+                {/* Badge - Stays put on the same line */}
                 <div style={{
-                    padding: "8px 16px",
+                    padding: "6px 14px",
                     borderRadius: "100px",
                     background: "rgba(34, 197, 94, 0.06)",
                     border: "1px solid rgba(34, 197, 94, 0.1)",
                     color: "#166534",
-                    fontSize: 10, fontWeight: 800, letterSpacing: 1,
-                    display: "flex", alignItems: "center", gap: 10,
+                    fontSize: 9,
+                    fontWeight: 800,
+                    letterSpacing: 1,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
                     whiteSpace: "nowrap",
-                    marginLeft: 20
+                    flexShrink: 0, // Forces it to stay on one line
+                    height: "fit-content"
                 }}>
                     <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#22C55E", boxShadow: "0 0 10px #22C55E" }} />
                     <span className="ov-hide-mobile">ACCEPTING NEW PATIENTS</span>
-                    <span className="ov-show-mobile" style={{ display: "none" }}>OPEN</span>
+                    <span className="ov-show-mobile">OPEN</span>
                 </div>
+
+                <style>{`
+        /* Essential fix for your screen width */
+        @media (max-width: 600px) {
+            .ov-hide-mobile { display: none !important; }
+            .ov-show-mobile { display: inline-block !important; }
+        }
+        @media (min-width: 601px) {
+            .ov-show-mobile { display: none !important; }
+        }
+    `}</style>
             </div>
 
             {/* 2. MAIN COMPOSITION GRID */}

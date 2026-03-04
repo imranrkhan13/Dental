@@ -191,7 +191,99 @@ export const clinics = {
         about:
             "Smile Dental Care was built around one idea — that great dentistry should be accessible to every family. For 12 years we have delivered honest, affordable, high-quality care across every age group, from a child's first tooth to a complete adult smile makeover.",
     },
+    "prague-clinics": {
+        // ── Identity
+        name: "Prague Clinics European Doctors",
+        shortName: "Prague Clinics",
+        tagline: "European Standards. Compassionate Care.",
+        heroHeading: "Experience World-Class\nEuropean Healthcare.",
+        heroSubheading:
+            "From specialized family medicine to advanced diagnostics, we bring Czech medical excellence to Nad Al Sheba.",
 
+        // ── Contact
+        phone: "+971 4 558 0540",
+        whatsapp: "97145580540",
+        email: "reception@pragueclinics.ae",
+        address: "Aswaaq Mall – 1st Floor, Nad Al Sheba 4, Dubai, UAE",
+        mapLink: "https://goo.gl/maps/xyz123",
+
+        // ── Brand colors
+        accentColor: "#0A6C8C",         // Professional Medical Blue
+        accentColorLight: "#F0F6FA",    // Soft sky blue for section bg
+        highlightColor: "#E3A875",      // Warm sand/gold accents
+
+        // ── Images
+        heroImage: "https://www.medicaim.com/uploads/844651c0-f359-11e8-84f9-49c32aac8774/000204IstanbulAestheticCenterMedicaim.jpg",
+        doctorImage: "https://img.freepik.com/premium-photo/medical-specialist-doing-healthcare-consultation-with-sick-patient-doctors-office-woman-working-as-doctor-consulting-person-with-illness-checkup-visit-healing-treatment_482257-29405.jpg",
+        clinicImages: [
+            "https://ideliahealth.com/wp-content/uploads/2023/02/istanbul-aesthetic-center-gallery-image-2.jpg",
+            "https://davidbaileyfurniture.co.uk/wp-content/uploads/2020/08/hospital-aesthetics-830.jpg",
+            "https://www.aestheticmed.com.pl/wp-content/uploads/2018/12/5ds_4876-edit-1.jpg"
+        ],
+
+        // ── Doctor (Primary Representative)
+        doctorName: "Dr. Olga Janovska",
+        doctorQual: "MD — Chief Physician & Founder",
+        doctorBio:
+            "A graduate of top Czech medical faculties with over 10 years of experience leading primary care networks in Europe. Dr. Janovska founded Prague Clinics to bring high-precision diagnostics and personalized European-style primary care to the UAE.",
+        doctorCredentials: ["Charles University Alumni", "10+ Years Leadership", "60k+ Group Patients", "Diagnostic Specialist"],
+
+        // ── Services
+        services: [
+            {
+                icon: "Activity",
+                title: "Family Medicine",
+                subtitle: "European Primary Care",
+                desc: "Focused on accurate diagnosis and long-term health management for adults, following strict European medical protocols.",
+                image: "https://www.shutterstock.com/image-photo/male-doctor-visiting-female-cancer-600nw-2683296897.jpg",
+            },
+            {
+                icon: "Baby",
+                title: "Pediatrics",
+                subtitle: "Specialized Child Care",
+                desc: "Dedicated pediatric services including vaccinations, developmental tracking, and compassionate care for your little ones.",
+                image: "https://newpeacylab.com/wp-content/uploads/2024/08/Medical_Treatment.jpg",
+            },
+            {
+                icon: "Stethoscope",
+                title: "Diagnostics",
+                subtitle: "High-precision testing",
+                desc: "State-of-the-art laboratory and imaging services to ensure early detection and highly accurate treatment pathways.",
+                image: "https://ideliahealth.com/wp-content/uploads/2023/02/istanbul-aesthetic-center-gallery-image-2.jpg",
+            },
+            {
+                icon: "Home",
+                title: "Homecare Services",
+                subtitle: "Care at your doorstep",
+                desc: "Professional medical visits and nursing care delivered in the comfort of your home across Dubai.",
+                image: "https://davidbaileyfurniture.co.uk/wp-content/uploads/2020/08/hospital-aesthetics-830.jpg",
+            },
+        ],
+
+        // ── Testimonials
+        testimonials: [
+            { name: "Mohammed Al Falasi", location: "Dubai", text: "The European standards of care are evident. Professional staff and very clean facility. I highly recommend them.", rating: 5 },
+            { name: "Elena R.", location: "Nad Al Sheba", text: "Finally, a clinic that listens. Dr. Jan was incredibly thorough with my diagnosis and the follow-up was excellent.", rating: 5 },
+            { name: "Taha Sayed", location: "Dubai", text: "Very professional team. They use the latest technology and the environment is very calming.", rating: 5 },
+        ],
+
+        // ── Stats
+        stats: [
+            { value: "60k+", label: "European Patients" },
+            { value: "45", label: "Group Locations" },
+            { value: "4.9", label: "Google Rating" },
+            { value: "10+", label: "Insurance Partners" },
+        ],
+
+        // ── Hours
+        clinicHours: [
+            { day: "Monday – Sunday", time: "10:00 – 22:00" },
+        ],
+
+        // ── About
+        about:
+            "Part of the renowned Vseobecny lekar Group, Prague Clinics brings a legacy of serving 60,000+ patients across 45 Central European locations to Dubai. We've built a clinic where advanced Czech medical technology and genuine compassionate care exist in equal measure.",
+    },
     // ── ADD MORE CLINICS BELOW ─────────────────────────────────────────────────
     // "new-clinic": { ... }
 };

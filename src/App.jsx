@@ -20,36 +20,31 @@
 // Multi-tenant resolver with DEMO fallback
 
 import { clinics } from "./data/clinics";
-import ClinicPage, { DEMO } from "./pages/ClinicPage";
+import ClinicPage from "./pages/ClinicPage";
+import { DEMO } from "./pages/ClinicPage"; // export DEMO from file
 
 function getSlug() {
   const host = window.location.hostname;
 
-  // remove www
-  const cleanHost = host.replace("www.", "");
-
-  // only process subdomains of techiesaie.com
-  if (cleanHost.endsWith("techiesaie.com")) {
-    const parts = cleanHost.split(".");
-
-    // if exactly 3 parts → subdomain exists
-    if (parts.length === 3) {
-      return parts[0]; // dr-idris
-    }
+  // Production subdomain
+  if (host.includes("techiesaie.com")) {
+    const parts = host.split(".");
+    if (parts.length >= 3) return parts[0];
   }
 
-  return null; // root or invalid
+  // Local dev query param
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("clinic")) return params.get("clinic");
+
+  // fallback to first clinic key
+  return Object.keys(clinics)[0];
 }
 
 export default function App() {
   const slug = getSlug();
 
-  console.log("Slug detected:", slug); // debug in browser
-
-  const clinic =
-    slug && clinics.hasOwnProperty(slug)
-      ? clinics[slug]
-      : DEMO;
+  // ✅ fallback to DEMO instead of 404
+  const clinic = clinics[slug] ?? DEMO;
 
   return <ClinicPage clinic={clinic} />;
 }
