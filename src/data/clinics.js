@@ -284,6 +284,99 @@ export const clinics = {
         about:
             "Part of the renowned Vseobecny lekar Group, Prague Clinics brings a legacy of serving 60,000+ patients across 45 Central European locations to Dubai. We've built a clinic where advanced Czech medical technology and genuine compassionate care exist in equal measure.",
     },
+    "madh-dental": {
+        // ── Identity
+        name: "Madh Dental Care- A Multispecialty Dental Clinic by Dr. Kriti Tiwari & Dr. Guru Jadhav",
+        shortName: "Madh Dental",
+        tagline: "Precision. Care. Excellence.",
+        heroHeading: "The Smile You've\nAlways Wanted.",
+        heroSubheading:
+            "Advanced dental care crafted with precision and delivered with warmth — in the heart of Mumbai.",
+
+        // ── Contact
+        phone: "+91 79772 57458",
+        whatsapp: "917977257458",
+        email: "contact@madhdental.com",
+        address: "Shop no. 2, Tiwari Complex, Madh Island, Near Harbadevi Mandir, Malad- (W), Mumbai 400061",
+        mapLink: "https://maps.google.com/?cid=11724461827431797227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
+
+        // ── Brand colors
+        accentColor: "#1A1A1A",
+        accentColorLight: "#F5F0E8",
+        highlightColor: "#C8A45D",
+
+        // ── Images from Google Maps
+        heroImage: "https://lh3.googleusercontent.com/p/AF1QipOBA1jyqK5HtgJzXXTbgoAJ3Zxv2Nv7elopwQqD=s4000",
+        doctorImage: "https://lh3.googleusercontent.com/p/AF1QipMK2hOULT1JkkqOEThHuhUgH80ydomfpFb96qSJ=s4000",
+        clinicImages: [
+            "https://lh3.googleusercontent.com/p/AF1QipOzHtITIYBdnNxQygJdMHXUbEmEvO1PND84FL9l=s4000",
+            "https://lh3.googleusercontent.com/p/AF1QipP6UN7k6HZ-InFUkzycHjgYc4FNm_zJiySgQMdn=s4000",
+            "https://lh3.googleusercontent.com/p/AF1QipO8LLBG822WAvRApeyXTB329QJrw8Xx3H8j-cPz=s4000",
+        ],
+
+        // ── Doctor
+        doctorName: "Dr. Kriti Tiwari & Dr. Guru Jadhav",
+        doctorQual: "BDS, MDS — Specialized Dental Surgeons",
+        doctorBio:
+            "With over 18 years of collective experience, Dr. Kriti and Dr. Guru have transformed thousands of smiles. Known for their gentle approach and pain-free treatments, they specialize in making even the most anxious patients feel at home.",
+        doctorCredentials: ["5.0 Google Rating", "18+ Years Experience", "4,000+ Smiles", "Pain-Free Specialist"],
+
+        // ── Services
+        services: [
+            {
+                icon: "Layers",
+                title: "Root Canal",
+                subtitle: "Pain-free precision",
+                desc: "Expert endodontic therapy using modern techniques. Patients consistently report a stress-free experience with natural-looking results.",
+                image: "https://lh3.googleusercontent.com/p/AF1QipNelNjV6WnCOB1VH32a6atZoYQaH3DATdrNUfTZ=s4000",
+            },
+            {
+                icon: "Sparkles",
+                title: "Smile Designing",
+                subtitle: "Complete transformation",
+                desc: "From veneers to full-mouth reconstructions, we use digital previews to craft the perfect smile tailored to your face.",
+                image: "https://lh3.googleusercontent.com/p/AF1QipOFbqtQzO_tX_WoK76aIkvHLnyP72ilHvpa8-Mb=s4000",
+            },
+            {
+                icon: "Shield",
+                title: "Dental Implants",
+                subtitle: "Permanent restoration",
+                desc: "State-of-the-art implant fixtures that restore both function and aesthetics with a focus on long-term durability.",
+                image: "https://lh3.googleusercontent.com/p/AF1QipOx_vm57EUQgcmu1k6zgzJ8U3TE6KGlP-pBuzfF=s4000",
+            },
+            {
+                icon: "AlignCenter",
+                title: "Invisible Aligners",
+                subtitle: "Discreet correction",
+                desc: "Straighten your teeth without metal braces using clear aligners that are virtually invisible and completely comfortable.",
+                image: "https://lh3.googleusercontent.com/p/AF1QipOmgYTS0d4awK087nbUo5jFHlsabgW3p4unz0x9=s4000",
+            },
+        ],
+
+        // ── Testimonials
+        testimonials: [
+            { name: "Misbah Furniturewala", location: "Mumbai", text: "I recently had a root canal done by Dr. Kriti, and I’m really happy with the experience. She was professional, gentle, and made the whole process feel smooth and stress-free. She also did a great job with the aesthetics - my tooth looks completely natural. I highly recommend her!", rating: 5 },
+            { name: "Sachin Mendhare", location: "Mumbai", text: "If you are looking for exceptional dental care and any dental treatment, then this is the place to be. Dr Kriti is extremely knowledgeable and professional yet approachable and comforting in her care. I have had multiple visits at Madh Dental not only for myself but also with other family members for their appointments and I have always admired how smoothly everything operates under their ownership. I pray they are always met with the goodness they spread to others and I am certain that they will always meet with success in each and every endeavour. God bless, thank you.", rating: 5 },
+            { name: "Ayesha Qureshi", location: "Madh Island", text: "I've been visiting Dr Kriti for many of my teeth fillings and implant fixtures along with my mom who first introduced me to this clinic. I must say that this place is a safe place for someone sooo scared of dentists and dental treatment- Dr Kriti makes sure to take such good care! Even when I'm not ready or feeling anxious, she lets me take my time and very gently and calmly guides me throughout the procedure. Feels like I'm talking to a good friend or my sister, hehe. Thank you for all the great care!!!", rating: 5 },
+        ],
+
+        // ── Stats
+        stats: [
+            { value: "4,000+", label: "Smiles Transformed" },
+            { value: "18", label: "Years of Practice" },
+            { value: "5.0", label: "Google Rating" },
+            { value: "98%", label: "Recommend Us" },
+        ],
+
+        // ── Hours
+        clinicHours: [
+            { day: "Mon – Sat", time: "10:00 – 14:00, 17:00 – 21:00" },
+            { day: "Sunday", time: "10:00 – 14:00" },
+        ],
+
+        about:
+            "Madh Dental Care was founded on the principle that world-class dentistry should be calm and personal. We specialize in treating dental anxiety with kindness and cutting-edge technology.",
+    }
     // ── ADD MORE CLINICS BELOW ─────────────────────────────────────────────────
     // "new-clinic": { ... }
 };
